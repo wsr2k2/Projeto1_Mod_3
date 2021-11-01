@@ -40,3 +40,6 @@ Foram adicionados validações dos dados inseridos e de campos em branco, sendo 
 
 Link para acessar o código no guithub:
 <https://github.com/wsr2k2/Projeto1_Mod_3>
+
+Utilizado no projeto: nodeJS para executar no ambiente do computador e incluindo bibliotecas de sistemas HTTP.
+Utilizado express que é a framework mais popular, assim gerenciando as requisições de http.
