@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 let bandas = [{
-    nome: "Peal Jam",
+    nome: "Pearl Jam",
     estilo: "Grunge",
     formacaoAtual: "Eddie Vedder; Stone Gossard; Jeff Ament; Mike McCready; Matt Cameron; Josh Klinghoffer",
     melhorMusica: "Alive"
@@ -15,7 +15,7 @@ let bandas = [{
 }];
 
 router.get("/", (req,res) => {
-    res.status(200).json({message: "Bandas, aumente o som!!!"});
+    res.status(200).json({message: "Bandas carregada, aumente o som!!!"});
 });
 
 // retorna a lista de bandas
@@ -36,7 +36,7 @@ router.get("/listarid/:id", (req,res) => {
 });
 
 // rota para buscar uma banda pelo nome.
-router.get("/listar/:nome", (req,res) => {
+router.get("/listarnome/:nome", (req,res) => {
     const nomeBanda  = req.params.nome;
     const banda = bandas.find((item) => item.nome === nomeBanda);
     if (!banda) {
@@ -114,7 +114,7 @@ router.delete("/:id" , (req, res) => {
     }else {
         delete bandas[id];
     }
-    res.status(200).json(`Banda: '${banda.nome}', excluída com sucesso!`)    
+    res.status(410).json(`Banda: '${banda.nome}', excluída com sucesso!`)    
 });
 
 module.exports = router;

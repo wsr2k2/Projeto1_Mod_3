@@ -16,7 +16,7 @@ let jogos = [{
 }];
 
 router.get("/", (req,res) => {
-    res.status(200).json({message: "Games, press Start!!!"});
+    res.status(200).json({message: "Jogos carregado, press Start!!!"});
 });
 
 // retorna a lista de jogos
@@ -37,7 +37,7 @@ router.get("/listarid/:id", (req,res) => {
 });
 
 // rota para buscar um jogo pelo nome.
-router.get("/listar/:nome", (req,res) => {
+router.get("/listarnome/:nome", (req,res) => {
     const nome = req.params.nome;
     const jogo = jogos.find((item) => item.titulo === nome);
     if (!jogo) {
@@ -115,7 +115,7 @@ router.delete("/:id" , (req, res) => {
     }else {
         delete jogos[id];
     }
-    res.status(200).json(`Jogo: '${jogo.titulo}', excluído com sucesso!`)    
+    res.status(410).json(`Jogo: '${jogo.titulo}', excluído com sucesso!`)    
 });
 
 module.exports = router;

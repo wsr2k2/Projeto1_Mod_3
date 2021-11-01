@@ -15,7 +15,7 @@ let filmes = [{
 }];
 
 router.get("/", (req,res) => {
-    res.status(200).json({message: "Movies, pegue sua pipoca!!!"});
+    res.status(200).json({message: "Filmes rodando, pegue sua pipoca e bom filme!!!"});
 });
 
 // retorna a lista de filmes
@@ -36,7 +36,7 @@ router.get("/listarid/:id", (req,res) => {
 });
 
 // rota para buscar um filme pelo nome.
-router.get("/listar/:nome", (req,res) => {
+router.get("/listarnome/:nome", (req,res) => {
     const nome = req.params.nome;
     const filme = filmes.find((item) => item.titulo === nome);
     if (!filme) {
@@ -114,7 +114,7 @@ router.delete("/:id" , (req, res) => {
     }else {
         delete filmes[id];
     }
-    res.status(200).json(`Filme: '${filme.titulo}', excluído com sucesso!`)    
+    res.status(410).json(`Filme: '${filme.titulo}', excluído com sucesso!`)    
 });
 
 module.exports = router;
