@@ -101,7 +101,7 @@ router.put("/:id" , (req, res) => {
         filmes[id] = filme;        
     }    
     res.status(200).json(`Filme: '${filme.titulo}', alterado com sucesso!`);    
-})
+});
 
 // deletar um filme pelo ID
 router.delete("/:id" , (req, res) => {
