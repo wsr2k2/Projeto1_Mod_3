@@ -114,7 +114,7 @@ router.delete("/:id" , (req, res) => {
     }else {
         delete filmes[id];
     }
-    res.status(410).json(`Filme: '${filme.titulo}', excluído com sucesso!`)    
+    res.status(200).json(`Filme: '${filme.titulo}', excluído com sucesso!`)    
 });
 
 module.exports = router;

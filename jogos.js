@@ -115,7 +115,7 @@ router.delete("/:id" , (req, res) => {
     }else {
         delete jogos[id];
     }
-    res.status(410).json(`Jogo: '${jogo.titulo}', excluído com sucesso!`)    
+    res.status(200).json(`Jogo: '${jogo.titulo}', excluído com sucesso!`)    
 });
 
 module.exports = router;

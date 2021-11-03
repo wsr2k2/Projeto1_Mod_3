@@ -114,7 +114,7 @@ router.delete("/:id" , (req, res) => {
     }else {
         delete bandas[id];
     }
-    res.status(410).json(`Banda: '${banda.nome}', excluída com sucesso!`)    
+    res.status(200).json(`Banda: '${banda.nome}', excluída com sucesso!`)    
 });
 
 module.exports = router;
