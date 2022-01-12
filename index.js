@@ -7,13 +7,13 @@ app.get("/", (req,res) => {
     res.status(200).json({message: "Bem vindos a Api Games, Movies e Bandas"})
 });
 
-const jogosRouter = require("./jogos");
+const jogosRouter = require("./routers/jogos.routes");
 app.use("/jogos", jogosRouter);
 
-const filmesRouter = require("./filmes");
+const filmesRouter = require("./routers/filmes.routes");
 app.use("/filmes", filmesRouter);
 
-const bandasRouter = require("./bandas");
+const bandasRouter = require("./routers/bandas.routes");
 app.use("/bandas", bandasRouter);
 
 app.listen(port, () => {
